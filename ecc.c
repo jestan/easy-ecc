@@ -813,7 +813,6 @@ static void EccPoint_double_jacobian(uint64_t *X1, uint64_t *Y1, uint64_t *Z1)
     /* t1 = X, t2 = Y, t3 = Z */
     uint64_t t4[NUM_ECC_DIGITS];
     uint64_t t5[NUM_ECC_DIGITS];
-    uint64_t t9[NUM_ECC_DIGITS];
     
     if(vli_isZero(Z1))
     {
@@ -843,7 +842,7 @@ static void EccPoint_double_jacobian(uint64_t *X1, uint64_t *Y1, uint64_t *Z1)
     {
         vli_rshift1(X1);
     }
-                     /* t1 = 3/2*(x1^2 - z1^4) = B */
+    /* t1 = 3/2*(x1^2 - z1^4) = B */
     
     vli_modSquare_fast(Z1, X1);      /* t3 = B^2 */
     vli_modSub(Z1, Z1, t5, curve_p); /* t3 = B^2 - A */
