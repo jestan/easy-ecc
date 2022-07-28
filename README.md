@@ -1,6 +1,8 @@
 easy-ecc
 =====
 
+# Please do not use this library, it is a very old fork of https://github.com/kmackay/micro-ecc, please use micro-ecc instead
+
 A simple and secure ECDH and ECDSA library.
 
 Features
